@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui",1265937416626
+started,bundle,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.editors",1265937416627
+started,bundle,org.eclipse.ui.forms,3.4.1.v20090714_35x,"org.eclipse.ui.forms",1265937416628
+started,bundle,org.eclipse.ui.ide,3.5.1.M20090826-0800,"org.eclipse.ui.ide",1265937416629
+started,bundle,org.eclipse.ui.intro,3.3.1.v20090805_35x,"org.eclipse.ui.intro",1265937416630
+started,bundle,org.eclipse.ui.intro.universal,3.2.300.v20090526,"org.eclipse.ui.intro.universal",1265937416630
+started,bundle,org.eclipse.ui.navigator,3.4.1.M20090911-1550,"org.eclipse.ui.navigator",1265937416630
+started,bundle,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.resources",1265937416631
+started,bundle,org.eclipse.ui.net,1.2.1.r35x_20090812-1200,"org.eclipse.ui.net",1265937416631
+started,bundle,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views",1265937416632
+started,bundle,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"org.eclipse.ui.workbench",1265937416633
+started,bundle,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.workbench.texteditor",1265937416634
+started,bundle,org.eclipse.update.configurator,3.3.0.v20090312,"org.eclipse.update.configurator",1265937416635
+os,sysinfo,,,"linux",1265937416644
+arch,sysinfo,,,"x86",1265937416644
+ws,sysinfo,,,"gtk",1265937416644
+locale,sysinfo,,,"en_US",1265937416644
+processors,sysinfo,,,"1",1265937416645
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1265937416645
+java.runtime.version,sysinfo,,,"1.6.0_18-b07",1265937416645
+java.specification.name,sysinfo,,,"Java Platform API Specification",1265937416699
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1265937416699
+java.specification.version,sysinfo,,,"1.6",1265937416699
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1265937416699
+java.version,sysinfo,,,"1.6.0_18",1265937416699

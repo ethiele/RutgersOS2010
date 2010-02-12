@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.vm.info,sysinfo,,,"mixed mode, sharing",1265937416699
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1265937416700
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1265937416700
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1265937416700
+java.vm.specification.version,sysinfo,,,"1.0",1265937416700
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1265937416700
+java.vm.version,sysinfo,,,"16.0-b13",1265937416700
+started,bundle,org.eclipse.mylyn.context.core,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.context.core",1265937416752
+started,bundle,org.eclipse.mylyn.context.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.context.ui",1265937416784
+started,bundle,org.eclipse.mylyn.tasks.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.tasks.ui",1265937416983
+started,bundle,org.eclipse.mylyn.team.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.team.ui",1265937416994
+started,bundle,org.eclipse.update.scheduler,3.2.200.v20081127,"org.eclipse.update.scheduler",1265937417017
+started,bundle,org.eclipse.update.core,3.2.300.v20090525,"org.eclipse.update.core",1265937417058
+started,bundle,org.eclipse.mylyn.monitor.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.monitor.ui",1265937417061
+started,bundle,org.eclipse.jsch.core,1.1.100.I20090430-0408,"org.eclipse.jsch.core",1265937417244
+started,bundle,org.eclipse.team.cvs.core,3.3.200.I20090430-0408,"org.eclipse.team.cvs.core",1265937417248
+started,bundle,org.eclipse.team.ui,3.5.0.I20090430-0408,"org.eclipse.team.ui",1265937417275
+started,bundle,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console",1265937417303
+started,bundle,org.eclipse.team.cvs.ui,3.3.201.R35x_v20090826-0905,"org.eclipse.team.cvs.ui",1265937417418
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265937423761
+closed,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265937439600
+stopped,bundle,org.eclipse.cdt.debug.mi.ui,6.0.0.200909110608,"org.eclipse.cdt.debug.mi.ui",1265937441566
+stopped,bundle,org.eclipse.cdt.debug.mi.core,6.0.0.200909110608,"org.eclipse.cdt.debug.mi.core",1265937441567
+stopped,bundle,org.eclipse.cdt.dsf.gdb.ui,2.0.0.200909110608,"org.eclipse.cdt.dsf.gdb.ui",1265937441568
+stopped,bundle,org.eclipse.cdt.dsf.ui,2.0.1.200909110608,"org.eclipse.cdt.dsf.ui",1265937441569
