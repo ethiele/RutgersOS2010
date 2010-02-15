@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : Assign1.c
+ Author      : Edward Thiele
+ Version     :
+ Copyright   : Your copyright notice
+ Description : CS416 Assign1
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}
