@@ -1,11 +1,10 @@
 /*
  ============================================================================
  Name        : fileRead.c
- Author      : Edward Thiele
+ Author      : 
  Version     :
  Copyright   : Your copyright notice
- Description : Reads a CDF and sorts it
- Notes       : must be complied in c99 mode
+ Description : Hello World in C, Ansi-style
  ============================================================================
  */
 
