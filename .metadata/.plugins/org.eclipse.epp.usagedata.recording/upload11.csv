@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.cdt.debug.mi.core,6.0.0.200909110608,"org.eclipse.cdt.debug.mi.core",1265937707167
+started,bundle,org.eclipse.cdt.launch,6.0.0.200909110608,"org.eclipse.cdt.launch",1265937707202
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265937707303
+error,log,,,"Error logged from Debug Core: ",1265937708266
+activated,view,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.ProjectExplorer",1265937720535
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265937746385
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265938258718
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265938259798
+activated,editor,org.eclipse.cdt.ui,5.1.1.200909110608,"org.eclipse.cdt.ui.editor.CEditor",1265938262560
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265938262667
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1265938268390
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265938278539
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265951109728
+activated,view,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.ProjectExplorer",1265951109811
+started,bundle,org.eclipse.compare,3.5.0.I20090514-0808,"org.eclipse.compare",1265951111735
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265951115156
+started,bundle,org.eclipse.ui.browser,3.2.300.v20090526,"org.eclipse.ui.browser",1265951125927
+opened,editor,org.eclipse.ui.browser,3.2.300.v20090526,"org.eclipse.ui.browser.editor",1265951126393
+activated,editor,org.eclipse.ui.browser,3.2.300.v20090526,"org.eclipse.ui.browser.editor",1265951126503
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265951126809
+activated,view,org.eclipse.ui.navigator.resources,3.4.1.M20090826-0800,"org.eclipse.ui.navigator.ProjectExplorer",1265951130251
+opened,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1265951135303
+activated,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1265951135422
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1265951151236
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1265951153141

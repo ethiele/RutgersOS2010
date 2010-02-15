@@ -22,3 +22,48 @@ java.io.IOException: read error
 	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:134)
 	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:207)
 	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.core 1 0 2010-02-12 15:01:12.732
+!MESSAGE Indexed 'fileRead' (1 sources, 33 headers) in 1.57 sec: 1,051 declarations; 1,384 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.debug.core 4 125 2010-02-15 08:20:40.933
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: read error
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read0(Native Method)
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read(SpawnerInputStream.java:66)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:144)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:134)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:207)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.core 4 125 2010-02-15 08:21:05.661
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: read error
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read0(Native Method)
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read(SpawnerInputStream.java:66)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:144)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:134)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:207)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.debug.core 4 125 2010-02-15 08:23:18.562
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: read error
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read0(Native Method)
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read(SpawnerInputStream.java:66)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:144)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:134)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:207)
+	at java.lang.Thread.run(Unknown Source)

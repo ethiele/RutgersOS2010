@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : fileRead.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+char *readFileAsString(char* filepath)
+{
+	int fileSize = 0;
+	int n, i, j;
+	FILE *pFile = fopen(filepath, "rb");
+	if (pFile == NULL)
+	{
+		puts("error opening file");
+		//exit(1);
+	}
+	fseek(pFile,0,SEEK_END);
+	fileSize = ftell(pFile);
+	rewind(pFile);
+
+	char *data = (char*) calloc (sizeof(char), fileSize + 20);
+	fread(data, 1, fileSize, pFile);
+	puts(data);
+	fclose(pFile);
+	puts("Done");
+	return data;
+}
+
+int main(void) {
+	//puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	readFileAsString("data.in");
+	return EXIT_SUCCESS;
+}
+
+
