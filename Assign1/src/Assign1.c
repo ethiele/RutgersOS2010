@@ -106,6 +106,19 @@ void printIntArray(int* arr, int size)
 	}
 }
 
+void writeCDF(int*arr, int size, char* path)
+{
+	FILE *file;
+	file = fopen(path, "w");
+	int i;
+	for (i=0; i<size-1; i++)
+	{
+		fprintf(file, "%d,", arr[i]);
+	}
+	fprintf(file, "%d", arr[size-1]);
+	fclose(file);
+}
+
 typedef struct chuck_data_t
 {
 	int chuckNumber;
@@ -156,6 +169,7 @@ int main(void) {
 	char* data = readFileAsString("data.in");
 	count = countCommas(data) + 1;
 	initArrayAndChuckTbl(count);
+	splitStringIntoArray(data, sortArray, count);
 	pthread_barrier_init(&sortSync, NULL, numOfThreads + 1);
 	pthread_t threads[numOfThreads];
 	writeTimestamp();
@@ -191,7 +205,11 @@ void *sorting_thread(void *threadNumber)
 	{
 		writeTimestamp();
 		printf("Thread %d starts work on chuck %d\n", thread_num, chuck->chuckNumber);
+		char* fileName =  (char*) calloc (sizeof(char), 15);
+		sprintf(fileName, "chuck%d", chuck->chuckNumber);
+
 		crapSort((int*)(sortArray + 1024*chuck->chuckNumber), 1024);
+		writeCDF((int*)(sortArray + 1024*chuck->chuckNumber), 1024, fileName);
 		chuck = getNextChuck();
 	}
 
