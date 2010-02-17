@@ -39,7 +39,6 @@ char *readFileAsString(char* filepath)
 	fread(data, 1, fileSize, pFile);
 	//puts(data);
 	fclose(pFile);
-	puts("Done");
 	return data;
 }
 
@@ -132,7 +131,7 @@ chuck_data_t* chucks;
 int chucks_size;
 pthread_mutex_t chucks_lock;
 
-void initArrayAndChuckTbl(int itemsCount)
+int initArrayAndChuckTbl(int itemsCount)
 {
 	int i;
 	int chuckCount;
@@ -157,10 +156,92 @@ void initArrayAndChuckTbl(int itemsCount)
 	}
 	chucks[chuckCount-1].next = NULL;
 	printf("Read %d data chucks...\n", chuckCount);
+	return chuckCount;
 }
 
 
 pthread_barrier_t sortSync;
+
+int* mergeAlgo(char* filepath1, char* filepath2)
+{
+	char* data1 = readFileAsString(filepath1);
+	char* data2 = readFileAsString(filepath2);
+	int count1 = countCommas(data1)+1;
+	int count2 = countCommas(data2)+1;
+	int* arr1 = (int*) calloc(sizeof(int),count1);
+	int* arr2 = (int*) calloc(sizeof(int),count2);
+	splitStringIntoArray(data1, arr1, count1);
+	splitStringIntoArray(data2, arr2, count2);
+	int arraySize = count1 + count2;
+
+	int* arr3  = (int*)calloc(sizeof(int), arraySize);
+	int i = 0;
+	int index1 = 0;
+	int index2 = 0;
+	for(i = 0; i < arraySize; ++i){
+		if((arr1[index1] >= arr2[index2])||(index2==count2)){
+			arr3[i] = arr1[index1];
+			++index1;
+			}
+		else if ((arr2[index2] > arr1[index1])||(index1==count1)){
+			arr3[i] = arr2[index2];
+			++index2;
+			};
+	};
+
+	return arr3;
+}
+
+int celDivide(int num, int den){
+	if (num % den == 0)
+		{return num / den;}
+	else
+		{return num / den + 1;}
+}
+
+int* mergeThread(int i, int p){
+	char* chunkName1 =  (char*) calloc (sizeof(char), 15);
+	char* chunkName2 =  (char*) calloc (sizeof(char), 15);
+	char* tempName =  (char*) calloc (sizeof(char), 15);
+	sprintf(chunkName1, "chuck%d", i);
+	sprintf(chunkName2, "chuck%d", i+1);
+	sprintf(tempName, "chuck%d", i/2);
+
+	int* temp = mergeAlgo(chunkName1, chunkName2);
+	remove(chunkName1);
+	remove(chunkName2);
+	writeCDF(temp, 1024*p, tempName);
+	return temp;
+
+}
+
+void oddChunkCorrection(int chunkCount){
+	//if odd number of chunks, will create an empty chunk
+	//for merge to work
+	if (chunkCount % 2 != 0 ){
+		char* tempName =  (char*) calloc (sizeof(char), 15);
+		sprintf(tempName, "chuck%d", chunkCount);
+		FILE *fp = fopen(tempName, "w");
+		fclose(fp);
+	};
+}
+
+void merge(int mergeCount){
+	int i = 0;
+	int j = 0;
+	int p = 2;
+	for(j = mergeCount; j>1 ;j=celDivide(j,2)){
+		oddChunkCorrection(j);
+		for(i = 0; i<j; i += 2){
+			mergeThread(i, p);
+		};
+		p = p*2;
+	};
+	oddChunkCorrection(j);
+	int* result = mergeThread(0, mergeCount);
+	writeCDF(result, sortArray_size, "data.out");
+	remove("chuck0");
+}
 
 int main(void) {
 	int numOfThreads = 5;
@@ -168,7 +249,7 @@ int main(void) {
 	int count = 0;
 	char* data = readFileAsString("data.in");
 	count = countCommas(data) + 1;
-	initArrayAndChuckTbl(count);
+	int chunkCount = initArrayAndChuckTbl(count);
 	splitStringIntoArray(data, sortArray, count);
 	pthread_barrier_init(&sortSync, NULL, numOfThreads + 1);
 	pthread_t threads[numOfThreads];
@@ -180,6 +261,12 @@ int main(void) {
 	}
 	pthread_barrier_wait(&sortSync);
 	puts("All Threads Done");
+
+	puts("\nStart of merge\n");
+	merge(chunkCount);
+	puts("End of merge\n");
+
+
 	return EXIT_SUCCESS;
 }
 
